@@ -41,6 +41,7 @@ class ListaDuplamenteLigada:
             self.inicio = elemento.proximo
             self.inicio.anterior = None
         else:
+            elemento = elemento.proximo
             while elemento != None:
                 if elemento.nome == nome:
                     if elemento.proximo != None:
