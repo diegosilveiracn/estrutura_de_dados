@@ -1,4 +1,4 @@
-class Elemento:
+class No:
     def __init__(self, valor):
         self.valor = valor
         self.ramoEsquerdo = None
@@ -10,21 +10,21 @@ class ArvoreBinaria:
         
     def inserir(self, valor):
         if self.raiz == None:
-            self.raiz = Elemento(valor)
+            self.raiz = No(valor)
         else:
             self.__inserir(valor, self.raiz)  
     
-    def __inserir(self, valor, elemento):
-        if elemento.valor > valor:
-            if elemento.ramoEsquerdo == None:
-                elemento.ramoEsquerdo = Elemento(valor)
+    def __inserir(self, valor, no):
+        if no.valor > valor:
+            if no.ramoEsquerdo == None:
+                no.ramoEsquerdo = No(valor)
             else:
-                self.__inserir(valor, elemento.ramoEsquerdo)
+                self.__inserir(valor, no.ramoEsquerdo)
         else:
-            if elemento.ramoDireito == None:
-                elemento.ramoDireito = Elemento(valor)
+            if no.ramoDireito == None:
+                no.ramoDireito = No(valor)
             else:
-                self.__inserir(valor, elemento.ramoDireito)
+                self.__inserir(valor, no.ramoDireito)
 
                     
 arvore = ArvoreBinaria()
