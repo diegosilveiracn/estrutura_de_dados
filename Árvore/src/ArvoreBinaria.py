@@ -61,7 +61,7 @@ class ArvoreBinaria:
                             no_pai.ramoEsquerdo = no.ramoEsquerdo
                         else: 
                             no_pai.ramoDireito = no.ramoEsquerdo
-                # Remover nó com duas subárvore
+                # Remover nó com duas subárvores
                 else:
                     nodo = no.ramoEsquerdo
                     anterior = no
