@@ -16,8 +16,8 @@ def quick_sort(lista, index_inicio=None, index_fim=None):
 
         if i < j:    
             lista[i], lista[j] = lista[j], lista[i]
-        i += 1
-        j -= 1
+            i += 1
+            j -= 1
 
     if j > index_inicio:
         quick_sort(lista, index_inicio, j)
