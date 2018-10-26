@@ -16,13 +16,13 @@ class FilaPrioridade:
         novo = Elemento(nome,prioridade)
         if self.inicio == None:
             self.inicio = novo
-        elif self.inicio.prioridade >= novo.prioridade:
+        elif self.inicio.prioridade < novo.prioridade:
             novo.proximo = self.inicio
             self.inicio = novo
         else:
             elemento = self.inicio
             while (elemento.proximo != None and 
-                   elemento.proximo.prioridade < novo.prioridade):
+                   elemento.proximo.prioridade > novo.prioridade):
                 elemento = elemento.proximo
             novo.proximo = elemento.proximo
             elemento.proximo = novo
@@ -37,9 +37,9 @@ class FilaPrioridade:
            
 fila = FilaPrioridade()
         
-fila.enfileirar('João', 3)
-fila.enfileirar('Pedro', 2)
-fila.enfileirar('Lucas', 1)
+fila.enfileirar('João', 1)
+fila.enfileirar('Pedro', 5)
+fila.enfileirar('Lucas', 2)
 fila.enfileirar('Maria', 0)
         
 nome = fila.desenfileirar()
